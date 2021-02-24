@@ -1,0 +1,176 @@
+:root {
+  --primary: #00ff84;
+  --dark: #0d0e0e;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "EB Garamond", serif;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.strive--primary {
+  color: var(--primary);
+}
+
+.btn-strive {
+  padding: 1rem 1.5rem;
+  background-color: #0d0e0e;
+  font-size: 1.2rem;
+  font-weight: 800;
+  min-width: 260px;
+}
+
+.btn-strive--primary {
+  background-color: var(--primary);
+}
+
+.main-section {
+  min-height: 100vh;
+  background-image: url("assets/smile.jpg");
+  background-size: 130%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+nav.navbar {
+  padding-top: 4rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.hero {
+  color: rgb(241, 238, 238);
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-size: 73px;
+  max-width: 420px;
+  line-height: 1;
+}
+
+.hero h1 + p {
+  font-size: 22px;
+}
+
+.about-us {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.about-us h3,
+.upcoming h3 {
+  font-family: inherit;
+  font-size: 26px;
+}
+
+section.upcoming {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-image: url("/assets/backgr02.2.png");
+  background-repeat: no-repeat;
+  background-size: 600px 100%;
+  background-position: right;
+}
+
+section.upcoming .calendar-box {
+  display: inline-block;
+  padding: 1.2rem;
+  min-width: 112px;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+  background-color: white;
+}
+
+section.upcoming .calendar-box--dark {
+  color: white;
+  background-color: var(--dark);
+}
+
+section.upcoming .calendar-box .month,
+section.upcoming .calendar-box .day {
+  line-height: 1;
+}
+section.upcoming .calendar-box .month {
+  font-size: 1.2rem;
+}
+
+section.upcoming .calendar-box .day {
+  font-size: 56px;
+  font-weight: 600;
+}
+
+.alert--success {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  text-align: center;
+  background-color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+}
+
+.alert--success a {
+  color: var(--dark);
+}
+footer {
+  background-color: var(--dark);
+  height: 100vh;
+  color: white;
+  padding: 3rem;
+  text-align: center;
+}
+
+@media (max-width: 1199px) {
+  .main-section {
+    background-size: cover;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero h1 + p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero {
+    min-height: 80vh;
+  }
+  nav.navbar {
+    padding: 2rem 1rem;
+  }
+}
